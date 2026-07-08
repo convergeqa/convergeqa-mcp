@@ -1,11 +1,14 @@
 # convergeqa-mcp
 
+<!-- mcp-name: io.github.convergeqa/reviews -->
+<!-- mcp-name: io.github.convergeqa/compare -->
+
 ConvergeQA is a multi-model document review system with public verification receipts. Its panels challenge thinking, surface disagreements, and document review evidence, while the responsible individual decides what to accept, reject, or revise.
 
 This package exposes two stdio MCP servers:
 
-- `convergeqa-mcp-reviews`: Critique and Iterate review tools.
-- `convergeqa-mcp-compare`: Compare due-diligence review tools.
+- `convergeqa-mcp reviews` (or `convergeqa-mcp-reviews`): Critique and Iterate review tools.
+- `convergeqa-mcp compare` (or `convergeqa-mcp-compare`): Compare due-diligence review tools.
 
 Both servers delegate to the same CLI client contracts used by ConvergeQA agent tooling. Reviews consume paid credits. The servers read a ConvergeQA Developer API key or service-account key from environment variables at runtime, and the tool never stores keys.
 
@@ -17,14 +20,21 @@ Both servers delegate to the same CLI client contracts used by ConvergeQA agent 
 - Trust: https://convergeqa.net/trust
 - LLM reference: https://convergeqa.net/llms.txt
 
-## Install From Git
+## Install
 
-No PyPI package has been published yet.
+From PyPI:
 
 ```bash
-pipx run --spec git+https://github.com/convergeqa/convergeqa-mcp.git convergeqa-mcp-reviews
-pipx run --spec git+https://github.com/convergeqa/convergeqa-mcp.git convergeqa-mcp-compare
+uvx convergeqa-mcp reviews
+uvx convergeqa-mcp compare
 ```
+
+```bash
+pipx run convergeqa-mcp reviews
+pipx run convergeqa-mcp compare
+```
+
+Or directly from Git:
 
 ```bash
 uvx --from git+https://github.com/convergeqa/convergeqa-mcp.git convergeqa-mcp-reviews
