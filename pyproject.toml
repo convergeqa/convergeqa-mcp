@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "convergeqa-mcp"
-version = "0.1.0"
+version = "0.2.0"
 description = "Stdio MCP servers for ConvergeQA review workflows."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -23,6 +23,7 @@ classifiers = [
 dependencies = []
 
 [project.scripts]
+convergeqa-mcp = "convergeqa_mcp.dispatch:main"
 convergeqa-mcp-reviews = "convergeqa_mcp.service_account_reviews_mcp:main"
 convergeqa-mcp-compare = "convergeqa_mcp.compare_due_diligence_mcp:main"
 

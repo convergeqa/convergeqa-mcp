@@ -1,0 +1,44 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.convergeqa/compare",
+  "title": "ConvergeQA Compare (Due Diligence)",
+  "description": "Put one prompt to a multi-model panel and compare answers side by side, with public verification receipts for due-diligence evidence.",
+  "repository": {
+    "url": "https://github.com/convergeqa/convergeqa-mcp",
+    "source": "github"
+  },
+  "version": "0.2.0",
+  "websiteUrl": "https://convergeqa.net/agents",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "convergeqa-mcp",
+      "version": "0.2.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "compare"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "CONVERGEQA_API_KEY",
+          "description": "ConvergeQA Developer API key (from https://convergeqa.net/developers). Reviews consume paid credits.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "CONVERGEQA_SERVICE_ACCOUNT_KEY",
+          "description": "ConvergeQA service-account key (alternative to the Developer API key).",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
