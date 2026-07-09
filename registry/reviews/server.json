@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.convergeqa/reviews",
   "title": "ConvergeQA Reviews (Critique & Iterate)",
-  "description": "Multi-model Critique and Iterate document reviews with public verification receipts. Panels challenge thinking; the responsible individual decides.",
+  "description": "Multi-model Critique and Iterate document reviews with public verification receipts.",
   "repository": {
     "url": "https://github.com/convergeqa/convergeqa-mcp",
     "source": "github"

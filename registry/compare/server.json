@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.convergeqa/compare",
   "title": "ConvergeQA Compare (Due Diligence)",
-  "description": "Put one prompt to a multi-model panel and compare answers side by side, with public verification receipts for due-diligence evidence.",
+  "description": "Compare one prompt across a multi-model panel side by side, with public verification receipts.",
   "repository": {
     "url": "https://github.com/convergeqa/convergeqa-mcp",
     "source": "github"
