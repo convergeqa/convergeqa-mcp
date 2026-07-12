@@ -102,6 +102,35 @@ env = { "CONVERGEQA_API_KEY" = "<your key>" }
 
 For clients without a `uvx` runtime, install once with `pipx install convergeqa-mcp` and point the client at the installed `convergeqa-mcp-reviews` and `convergeqa-mcp-compare` commands. Python 3.10 or newer; no other runtime dependencies.
 
+## Tools
+
+`convergeqa-mcp reviews` (16 tools):
+
+- `convergeqa_critique_start`: Start a private authenticated Critique agent review.
+- `convergeqa_critique_status`: Fetch owner-scoped Critique job status.
+- `convergeqa_critique_packet`: Fetch owner-authenticated Critique packet JSON and optionally write it to a path.
+- `convergeqa_critique_session`: Fetch owner-authenticated Critique session packet.
+- `convergeqa_critique_sessions`: List owner-authenticated Critique sessions.
+- `convergeqa_critique_templates`: List API-visible ConvergeQA templates for the configured credential.
+- `convergeqa_critique_decide`: Submit delegated Critique decisions.
+- `convergeqa_critique_export`: Download owner-authenticated Critique export ZIP to a caller-selected path.
+- `convergeqa_iterate_start`: Start a private authenticated Iterate agent review.
+- `convergeqa_iterate_status`: Fetch owner-scoped Iterate job status.
+- `convergeqa_iterate_packet`: Fetch owner-authenticated Iterate packet JSON and optionally write it to a path.
+- `convergeqa_iterate_session`: Fetch owner-authenticated Iterate session packet.
+- `convergeqa_iterate_sessions`: List owner-authenticated Iterate sessions.
+- `convergeqa_iterate_templates`: List API-visible ConvergeQA templates for the configured credential.
+- `convergeqa_iterate_decide`: Submit delegated Iterate decisions.
+- `convergeqa_iterate_export`: Download owner-authenticated Iterate export ZIP to a caller-selected path.
+
+`convergeqa-mcp compare` (5 tools):
+
+- `convergeqa_compare_submit`: Submit a private authenticated Compare due-diligence job.
+- `convergeqa_compare_status`: Fetch owner-scoped Compare due-diligence job status.
+- `convergeqa_compare_packet`: Fetch owner-authenticated packet JSON and optionally write it to a caller-selected path.
+- `convergeqa_compare_bundle`: Download owner-authenticated Compare due-diligence bundle to a caller-selected path.
+- `convergeqa_compare_run`: Submit, poll, fetch packet, and optionally download packet/bundle artifacts.
+
 ## Credentials
 
 The review servers accept these default environment variable names:
