@@ -46,13 +46,13 @@ uvx --from git+https://github.com/convergeqa/convergeqa-mcp.git convergeqa-mcp-c
 Set `CONVERGEQA_API_KEY` or `CONVERGEQA_SERVICE_ACCOUNT_KEY` before starting your MCP client. The default key names are uppercase environment variables.
 
 ```bash
-claude mcp add convergeqa-reviews --env CONVERGEQA_API_KEY=$CONVERGEQA_API_KEY -- uvx --from git+https://github.com/convergeqa/convergeqa-mcp.git convergeqa-mcp-reviews
+claude mcp add convergeqa-reviews --env CONVERGEQA_API_KEY=$CONVERGEQA_API_KEY -- uvx convergeqa-mcp reviews
 ```
 
 Add Compare as a second server:
 
 ```bash
-claude mcp add convergeqa-compare --env CONVERGEQA_API_KEY=$CONVERGEQA_API_KEY -- uvx --from git+https://github.com/convergeqa/convergeqa-mcp.git convergeqa-mcp-compare
+claude mcp add convergeqa-compare --env CONVERGEQA_API_KEY=$CONVERGEQA_API_KEY -- uvx convergeqa-mcp compare
 ```
 
 ## Claude Desktop
@@ -64,22 +64,14 @@ Example `claude_desktop_config.json`:
   "mcpServers": {
     "convergeqa-reviews": {
       "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/convergeqa/convergeqa-mcp.git",
-        "convergeqa-mcp-reviews"
-      ],
+      "args": ["convergeqa-mcp", "reviews"],
       "env": {
         "CONVERGEQA_API_KEY": "${CONVERGEQA_API_KEY}"
       }
     },
     "convergeqa-compare": {
       "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/convergeqa/convergeqa-mcp.git",
-        "convergeqa-mcp-compare"
-      ],
+      "args": ["convergeqa-mcp", "compare"],
       "env": {
         "CONVERGEQA_API_KEY": "${CONVERGEQA_API_KEY}"
       }
@@ -99,16 +91,16 @@ Codex CLI (`~/.codex/config.toml`):
 ```toml
 [mcp_servers.convergeqa-reviews]
 command = "uvx"
-args = ["--from", "git+https://github.com/convergeqa/convergeqa-mcp.git", "convergeqa-mcp-reviews"]
+args = ["convergeqa-mcp", "reviews"]
 env = { "CONVERGEQA_API_KEY" = "<your key>" }
 
 [mcp_servers.convergeqa-compare]
 command = "uvx"
-args = ["--from", "git+https://github.com/convergeqa/convergeqa-mcp.git", "convergeqa-mcp-compare"]
+args = ["convergeqa-mcp", "compare"]
 env = { "CONVERGEQA_API_KEY" = "<your key>" }
 ```
 
-For clients without a `uvx` runtime, install once with `pipx install git+https://github.com/convergeqa/convergeqa-mcp.git` and point the client at the installed `convergeqa-mcp-reviews` and `convergeqa-mcp-compare` commands. Python 3.10 or newer; no other runtime dependencies.
+For clients without a `uvx` runtime, install once with `pipx install convergeqa-mcp` and point the client at the installed `convergeqa-mcp-reviews` and `convergeqa-mcp-compare` commands. Python 3.10 or newer; no other runtime dependencies.
 
 ## Credentials
 

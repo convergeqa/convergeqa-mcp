@@ -13,3 +13,4 @@ build/
 .env
 .env.*
 *.log
+mcp-publisher.exe
